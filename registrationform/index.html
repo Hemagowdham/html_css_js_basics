@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div>
+    <form action="" method="post">
+        <h1>Registration form</h1>
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+
+                <td><input type="text" name="name" id="name" /></td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Password</label></td>
+
+                <td><input type="password" name="password" id="password" /></td>
+            </tr>
+
+            <tr>
+                <td><label for="address">Enter your address</label></td>
+
+                <td><textarea name="address" id="address" rows="5" cols="10"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="mail">Enter your email</label></td>
+
+                <td><input type="email" name="mail" id="mail" /></td>
+            </tr>
+
+            <tr>
+                <td><label for="mobilenumber">Enter your mobile</label></td>
+
+                <td><input type="text" name="mobilenumber" id="mobilenumber" /></td>
+            </tr>
+
+            <tr>
+                <td><label for="gender">Select your gender</label></td>
+
+                <td>
+                    <input type="radio" name="gender" id="male" value="male" />
+                    <label for="male">male</label>
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <label for="female">female</label>
+                </td>    
+            </tr>
+
+            <tr>
+                <td><label for="language">Language Preference</label></td>
+
+                <td>
+                    <label for="english">English</label>
+                    <input type="checkbox" name="english" id="english" value="english" />
+                    <label for="telugu">Telugu</label>
+                    <input type="checkbox" name="telugu" id="telugu" value="telugu" />
+                    <label for="hindi">Hindi</label>
+                    <input type="checkbox" name="hindi" id="hindi" value="hindi" />
+                </td>    
+            </tr>
+
+            <tr>
+                <td><label for="dateofbirth">Select your DOB</label></td>
+
+                <td><input type="date" name="dateofbirth" id="dateofbirth" placeholder="dd-mm-yyyy"/></td>
+            </tr>
+
+            <tr>
+                <td><button>Register</button></td>
+                <td><button>Cancel</button></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+</html>

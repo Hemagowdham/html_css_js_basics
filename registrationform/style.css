@@ -1,0 +1,12 @@
+body {
+    background-color: lightpink;
+}
+
+label {
+    font-weight: bold;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}

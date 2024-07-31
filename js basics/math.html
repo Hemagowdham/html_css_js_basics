@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <title>Java script Math calculations</title>
+</head>
+<body>  
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;">
+        <h4>Area of Circle</h4>
+        <label for="radius">Radius=</label>
+        <input type="number" id="radius1" name="radius">
+        <button onclick="circleAreaCalculate()">Calculate</button>
+        <div id="areaofcircle">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Circumference of Circle</h4>
+        <label for="radius">Radius=</label>
+        <input type="number" id="radius2" name="radius">
+        <button onclick="circumferenceCalculate()">Calculate</button>
+        <div id="circumferenceofcircle">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Area of Rectangle</h4>
+        <label for="length">Length=</label>
+        <input type="number" id="length1" name="length">
+        <label for="width">Width=</label>
+        <input type="number" id="width1" name="width">
+        <button onclick="rectangleAreaCalculate()">Calculate</button>
+        <div id="areaofrectangle">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Perimeter of Rectangle</h4>
+        <label for="length">Length=</label>
+        <input type="number" id="length2" name="length">
+        <label for="width">Width=</label>
+        <input type="number" id="width2" name="width">
+        <button onclick="rectanglePerimeterCalculate()">Calculate</button>
+        <div id="perimeterofrectangle">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;">
+        <h4>Area of Square</h4>
+        <label for="side">Side=</label>
+        <input type="number" id="squareside" name="squareside">
+        <button onclick="squareAreaCalculate()">Calculate</button>
+        <div id="areaofsquare">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Area of Triangle</h4>
+        <label for="base">Base=</label>
+        <input type="number" id="base" name="base">
+        <label for="heigth">Height=</label>
+        <input type="number" id="height" name="height">
+        <button onclick="triangleAreaCalculate()">Calculate</button>
+        <div id="areaoftriangle">
+        </div>
+    </div>
+    
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Area of Equilateral Triangle</h4>
+        <label for="side">Side length=</label>
+        <input type="number" id="side" name="side">
+        <button onclick="equilateraltriangleAreaCalculate()">Calculate</button>
+        <div id="areaofequilateraltriangle">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Surface Area of Sphere</h4>
+        <label for="radius">Sphere Radius=</label>
+        <input type="number" id="sphereradius1" name="sphereradius">
+        <button onclick="sphereSurfaceAreaCalculate()">Calculate</button>
+        <div id="surfaceareaofsphere">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Volume of Sphere</h4>
+        <label for="radius">Sphere Radius=</label>
+        <input type="number" id="sphereradius2" name="sphereradius">
+        <button onclick="sphereVolumeCalculate()">Calculate</button>
+        <div id="volumeofsphere">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Simple Interest</h4>
+        <label for="principle">Principle=</label>
+        <input type="number" id="principle1" name="principle">
+        <label for="time">Time(in years)=</label>
+        <input type="number" id="time1" name="time">
+        <label for="rate">Rate of Interest=</label>
+        <input type="number" id="rate1" name="rate">
+        <button onclick="simpleInterestCalculate()">Calculate</button>
+        <div id="simpleinterest">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Compound Interest</h4>
+        <label for="principle">Principle=</label>
+        <input type="number" id="principle2" name="principle">
+        <label for="time">Time(in years)=</label>
+        <input type="number" id="time2" name="time">
+        <label for="rate">Rate of Interest=</label>
+        <input type="number" id="rate2" name="rate">
+        <button onclick="compoundInterestCalculate()">Calculate</button>
+        <div id="compoundinterest">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Days to Year Conversion</h4>
+        <label for="days">Days=</label>
+        <input type="number" id="days" name="days">
+        <button onclick="daysToYearCalculate()">Calculate</button>
+        <div id="daystoyear">
+        </div>
+    </div>
+
+    <div style="border: solid 1px black; margin: 10px; padding: 10px;" >
+        <h4>Farenheit to Celcius Conversion</h4>
+        <label for="farenheit">Farenheit=</label>
+        <input type="number" id="farenheit" name="farenheit">
+        <button onclick="farenheitToCelciusCalculate()">Calculate</button>
+        <div id="farenheittocelcius">
+        </div>
+    </div>
+
+
+    <script>
+        var linebreak = "<br />"
+        function circleAreaCalculate() {
+            var r = document.getElementById("radius1").value;
+            var a = 3.14*r*r;
+            document.getElementById("areaofcircle").innerHTML = "<h4>Result</h4>" + "Area of circle = π * (r^2) = π * ("+r+"^2) = <strong>"+a+"</strong>" ;
+        }
+
+        function circumferenceCalculate() {
+            var r = document.getElementById("radius2").value;
+            var a = 2*3.14*r;
+            document.getElementById("circumferenceofcircle").innerHTML = "<h4>Result</h4>" + "Circumference of circle = 2*π*r = 2* π * "+r+" = <strong>"+a+"</strong>" ;
+        }
+
+        function rectangleAreaCalculate() {
+            var l = document.getElementById("length1").value;
+            var b = document.getElementById("width1").value;
+            var a = l*b;
+            document.getElementById("areaofrectangle").innerHTML = "<h4>Result</h4>" + "Area of rectangle = l*b = "+l+" * "+b+" = <strong>"+a+"</strong>" ;
+        }
+
+        function rectanglePerimeterCalculate() {
+            var l = document.getElementById("length2").value;
+            var b = document.getElementById("width2").value;
+            var a = (2*l)+(2*b);
+            document.getElementById("perimeterofrectangle").innerHTML = "<h4>Result</h4>" + "Perimeter of rectangle = 2*(l+b) = 2*("+l+" + "+b+") = <strong>"+a+"</strong>" ;
+        }
+
+        function squareAreaCalculate() {
+            var s = document.getElementById("squareside").value;
+            var a = s*s;
+            document.getElementById("areaofsquare").innerHTML = "<h4>Result</h4>" + "Area of square = a*a = "+s+" * "+s+" = <strong>"+a+"</strong>" ;
+        }        
+
+        function triangleAreaCalculate() {
+            var b = document.getElementById("base").value;
+            var h = document.getElementById("height").value;
+            var a = (b*h)/2;
+            document.getElementById("areaoftriangle").innerHTML = "<h4>Result</h4>" + "Area of triangle = (b*h)/2 = ("+b+" * "+h+")/2 = <strong>"+a+"</strong>" ;
+        }
+
+        function equilateraltriangleAreaCalculate() {
+            var s = document.getElementById("side").value;
+            var a = (Math.sqrt(3)/4)*(s*s);
+            document.getElementById("areaofequilateraltriangle").innerHTML = "<h4>Result</h4>" + "Area of triangle = (√3/4)a² = (√3/4)"+s+"² = <strong>"+a+"</strong>" ;
+        }
+
+        function sphereSurfaceAreaCalculate() {
+            var r = document.getElementById("sphereradius1").value;
+            var a = 4*Math.PI*r*r;
+            document.getElementById("surfaceareaofsphere").innerHTML = "<h4>Result</h4>" + "Surface area of sphere = 4*π*r² = 4*π*"+r+"² = <strong>"+a+"</strong>" ;
+        }     
+
+        function sphereVolumeCalculate() {
+            var r = document.getElementById("sphereradius2").value;
+            var a = (4/3)*Math.PI*Math.pow(r, 3);
+            document.getElementById("volumeofsphere").innerHTML = "<h4>Result</h4>" + "Surface area of sphere = 4/3*π*r³ = 4/3*π*"+r+"³ = <strong>"+a+"</strong>" ;
+        }     
+
+        function simpleInterestCalculate() {
+            var p = document.getElementById("principle1").value;
+            var n = document.getElementById("time1").value;
+            var r = document.getElementById("rate1").value;
+            var si = (p*n*r)/100;
+            document.getElementById("simpleinterest").innerHTML = "<h4>Result</h4>" + "Simple Interest = (p*n*r)/100 = ("+p+"*"+n+"*"+r+")/100 = <strong>"+si+"</strong>" ;
+        }     
+
+        function compoundInterestCalculate() {
+            var p = document.getElementById("principle2").value;
+            var n = document.getElementById("time2").value;
+            var r = document.getElementById("rate2").value;
+            var ci = (p*Math.pow((1+(r/100)), n)) - p;
+            document.getElementById("compoundinterest").innerHTML = "<h4>Result</h4>" + "Compound Interest = p*(1+r/100)<super>n</super> - p = "+p+"*(1+"+r+"/100)<sup>"+n+"</sup> - "+p+" = <strong>"+ci+"</strong>" ;
+        }     
+
+        function daysToYearCalculate() {
+            var d = document.getElementById("days").value;
+            var y = d/365;
+            document.getElementById("daystoyear").innerHTML = "<h4>Result</h4>" + "Year = days/365 = "+d+"/365 = <strong>"+y+"</strong>" ;
+        }     
+
+        function farenheitToCelciusCalculate() {
+            var f = document.getElementById("farenheit").value;
+            var c = (f-32)*(5/9);
+            document.getElementById("farenheittocelcius").innerHTML = "<h4>Result</h4>" + "Celcius = (f-32)*5/9 = ("+f+" - 32)*5/9 = <strong>"+c+"</strong>" ;
+        }     
+
+    </script>
+</body>
+</html>
