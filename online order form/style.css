@@ -1,0 +1,20 @@
+div {
+    background-color: rgb(51, 162, 0);
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+fieldset {
+    margin: 5px;
+    border: solid 1px white;
+    border-radius: 3px;
+}
+
+input {
+    width: 750px;
+}
